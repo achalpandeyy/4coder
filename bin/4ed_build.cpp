@@ -569,6 +569,12 @@ build_main(Arena *arena, char *cdir, b32 update_local_theme, u32 flags, u32 arch
         fm_clear_folder(themes_folder);
         fm_make_folder_if_missing(arena, themes_folder);
         fm_copy_all(source_themes_folder, themes_folder);
+
+        // TODO(achal): We should probably do the same i.e. clearing and copying for fonts?
+        // For this we would have to put the default fonts in the ship_files directory.
+        // I don't know how Allen intended it to work.
+        // The distribution on itch.io does contain a fonts folder in the same directory
+        // as the 4ed executable.
     }
     
     fflush(stdout);

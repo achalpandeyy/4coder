@@ -50,7 +50,7 @@ SOFTWARE.
 1. Create an empty folder named "4ed" to contain the codebase.
 2. Clone the repository
 3. Rename the folder containing the repository to "code"
-4. At the same level as the "4ed" folder, clone the "4coder-non-source" repository
+4. Inside the newly created "4ed" folder, and on the same level as the "code" folder, clone the "4coder-non-source" repository
 5. A. On windows setup the visual studio command line magic sauce so that "cl" works
    B. On linux setup g++
    C. On mac setup clang
