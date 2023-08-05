@@ -365,7 +365,8 @@ fm_clear_folder(char *folder){
         fprintf(stdout, "clearing folder %s\n", folder);
     }
     fflush(stdout);
-    systemf("del /S /Q /F %s\\* > nul & rmdir /S /Q %s > nul & mkdir %s > nul", folder, folder, folder);
+    // NOTE(achal): Yeah it could be probably better to use Windows API functions but ain't nobody got time for that
+    systemf("if exist %s (del /S /Q /F %s\\* > nul & rmdir /S /Q %s > nul) & mkdir %s > nul", folder, folder, folder, folder);
 }
 
 internal void

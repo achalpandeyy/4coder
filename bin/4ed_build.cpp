@@ -569,13 +569,33 @@ build_main(Arena *arena, char *cdir, b32 update_local_theme, u32 flags, u32 arch
         fm_clear_folder(themes_folder);
         fm_make_folder_if_missing(arena, themes_folder);
         fm_copy_all(source_themes_folder, themes_folder);
-
-        // TODO(achal): We should probably do the same i.e. clearing and copying for fonts?
-        // For this we would have to put the default fonts in the ship_files directory.
-        // I don't know how Allen intended it to work.
-        // The distribution on itch.io does contain a fonts folder in the same directory
-        // as the 4ed executable.
     }
+
+#if defined(PACKAGE_DEMO_X64) || defined(PACKAGE_DEMO_X86) || defined(PACKAGE_SUPER_X64) || defined(PACKAGE_SUPER_X86)
+    #error We don't support packaging yet.
+#endif
+
+    // copy the fonts
+    {
+        char *fonts_folder = fm_str(arena, "../build/fonts");
+        char *source_fonts_folder = fm_str(arena, "ship_files/fonts");
+        fm_clear_folder(fonts_folder);
+        fm_make_folder_if_missing(arena, fonts_folder);
+        fm_copy_all(source_fonts_folder, fonts_folder);
+    }
+
+    // TODO(achal): We only copy the themes above but I think we should also copy the following files in ship_files:
+    // - bindings.4coder
+    // - config.4coder
+    // - mac-bindings.4coder (only on mac, right?)
+    // - the fonts directory (which is not even in ship_files directory)
+    //
+    // The distribution on itch.io comes with all of these files.
+    //
+    // Additionally there are the following directories in distribution which does not automatically come into the build folder:
+    // - audio_test (don't know what this is for)
+    // - custom (don't know what this is for)
+    // - 4coder_fleury (instead of this I will use my compiled version of 4coder_fleury)
     
     fflush(stdout);
 }
