@@ -1,0 +1,56 @@
+defcolor_bar = 0xFF191A21;
+defcolor_base = 0xFFF15355;
+defcolor_pop1 = 0xff50FA7B; // This is "Switch", "Command", "Definition" etc, words at the top of the lister.
+defcolor_pop2 = 0xFFFFFF00; // The "not saved" indicator on the top bar and "shortcuts" in command lister.
+defcolor_back = 0xFF282A36;
+
+// defcolor_include               = 0xffffa900; // TODO(achal): Don't know what this is for: #include <stuff> is colored according to the defcolor_str_constant
+defcolor_keyword               = 0xffFF79c6;
+
+defcolor_margin = 0xFF181818;
+defcolor_margin_hover = 0xFF252525;
+defcolor_margin_active = 0xffFFDD23;
+defcolor_list_item = {defcolor_margin, defcolor_back};
+defcolor_list_item_hover = {defcolor_margin_hover, defcolor_margin};
+defcolor_list_item_active = {defcolor_margin_active, 0xff63523D};
+defcolor_cursor                = { 0xFF00EE00, 0xffe0741b, 0xff1be094, 0xffba60c4 };
+defcolor_highlight = 0xFF636066;
+defcolor_mark = defcolor_cursor;
+defcolor_text_default = 0xFFe3e0d7;
+defcolor_at_cursor = defcolor_back;
+defcolor_highlight_cursor_line = 0xFF383838;
+defcolor_at_highlight = 0xFFd787ff;
+defcolor_comment = 0xFF9c998e;
+defcolor_comment_pop = { 0xff2AB34F, 0xffDB2828 }; // { NOTE, TODO }
+defcolor_keyword = 0xFF88b8f6;
+defcolor_str_constant = 0xffF1F382;
+defcolor_int_constant = 0xffBD93F9;
+defcolor_char_constant = defcolor_int_constant;
+defcolor_float_constant = defcolor_int_constant;
+defcolor_bool_constant = defcolor_int_constant;
+defcolor_preproc = 0xFFFF79BD;
+defcolor_special_character = defcolor_int_constant;
+defcolor_ghost_character = defcolor_char_constant;
+
+defcolor_paste = defcolor_ghost_character;
+
+defcolor_undo = defcolor_keyword;
+
+defcolor_highlight_junk = 0xFF7b1c6e;
+defcolor_highlight_white = 0xFF3e3969;
+
+defcolor_bar_active = 0xFF666666; // not sure what this is
+
+defcolor_back_cycle = {0x10A00000, 0x0C00A000, 0x0C0000A0, 0x0CA0A000};
+defcolor_text_cycle = {0xFFA00000, 0xFF00A000, 0xFF0030B8, 0xFFA0A000};
+
+defcolor_line_numbers_back = 0xFF202020;
+defcolor_line_numbers_text = 0xFF737067;
+
+fleury_color_comment_user_name     = 0xffffdd23;
+fleury_color_index_product_type    = 0xff8BE9F9; // There are types
+fleury_color_index_function        = 0xff4EFA7B;
+fleury_color_index_macro           = 0xffFFB86C;
+fleury_color_syntax_crap           = 0xffFFFFFF;
+fleury_color_token_highlight       = 0x88f2d357; // This highlights (by underlining) the "currently-focused" token
+fleury_color_token_minor_highlight = 0x44d19045; // This highlights the "non-currently-focused" tokens
