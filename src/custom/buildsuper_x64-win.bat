@@ -1,5 +1,7 @@
 @echo off
 
+REM TODO(achal): I don't get it - why is this file necessary?
+
 REM usage: <script> [target [mode]]
 REM  works from any directory, but must remain in custom/bin path to work
 REM  target : if specified determines the file that acts as the build target

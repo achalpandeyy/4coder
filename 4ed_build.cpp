@@ -146,7 +146,7 @@ char *g_src_include[] = { "src", 0 };
 char *g_default_custom_target = "../src/custom/4coder_default_bindings.cpp";
 
 // NOTE(allen): Build flags
-
+// NOTE(achal): Any of these flags are not meant to be exposed to the user of 4ed_build. They should just specify the correct defines - OPT_BUILD or DEV_BUILD.
 enum{
     OPTS = 0x1,
     LIBS = 0x2,

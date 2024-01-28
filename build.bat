@@ -15,6 +15,7 @@ set custom_root=%src_root%\custom
 :: set custom_bin=%custom_root\bin
 cd %location%
 
+REM NOTE(achal): Use: OPT_BUILD or DEV_BUILD
 set mode=%1
 if "%mode%" == "" (set mode="/DDEV_BUILD")
 
