@@ -308,10 +308,9 @@ build(Arena *arena, u32 flags, u32 arch, char *code_path, char **code_files, cha
 "-Wno-unused-result "                 \
 "-std=c++11"
 
-// TODO(achal): I don't think we use fontconfig anymore on Linux.
 # define GCC_LIBS_COMMON       \
 "-lX11 -lpthread -lm -lrt "   \
-"-lGL -ldl -lXfixes -lfreetype -lfontconfig"
+"-lGL -ldl -lXfixes -lfreetype"
 
 # define GCC_LIBS_X64 GCC_LIBS_COMMON
 # define GCC_LIBS_X86 GCC_LIBS_COMMON

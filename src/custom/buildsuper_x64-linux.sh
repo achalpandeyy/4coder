@@ -5,8 +5,7 @@ set -e
 
 # Store the real CWD
 ME="$(readlink -f "$0")"
-LOCATION="$(dirname "$ME")"
-CODE_HOME="$(dirname "$LOCATION")"
+CODE_HOME="$(dirname "$ME")"
 
 # Find the most reasonable candidate build file
 SOURCE="$1"
