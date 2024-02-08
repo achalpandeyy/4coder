@@ -1,10 +1,9 @@
 build/
 .vscode/
-
-# TODO(achal): Why are we tracking generated files again??
 src/custom/generated
 
 vc120.pdb
 4ed_data.ctm
 .DS_Store
 *.dSYM
+*.so
