@@ -2,6 +2,14 @@ build/
 .vscode/
 src/custom/generated
 
+*.pdb
+*.dll
+
+src/custom/4coder_fleury/custom_4coder.dll
+
+src/custom/generated/command_metadata.h
+src/custom/generated/managed_id_metadata.cpp
+
 vc120.pdb
 4ed_data.ctm
 .DS_Store
